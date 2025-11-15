@@ -22,14 +22,18 @@
     <meta property="og:image" content="https://printsmith.ie/assets/img/printsmithlogo.png"/>
     <meta name="twitter:card" content="summary_large_image"/>
     <style>
-      :root{--brand:#0d6efd;--brand-dark:#0b5ed7;--brand-accent:#6610f2;--text:#222;--bg:#F0ECE3;--radius:.75rem;--gradient:linear-gradient(135deg,#0d6efd 0%,#6610f2 80%);}    
+      :root{--brand:#0d6efd;--brand-dark:#0b5ed7;--brand-accent:#6610f2;--text:#222;--bg:#F0ECE3;--radius:.75rem;--gradient:linear-gradient(135deg,#1e3a8a 0%,#3b82f6 35%,#8b5cf6 70%,#a855f7 100%);}    
       body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--text);}  
       h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.15;letter-spacing:.3px}
-      .hero{background:var(--gradient);color:#fff;position:relative;overflow:hidden;padding:4rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
-      .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.25),transparent 60%);mix-blend-mode:overlay;}
-      .hero h1{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.25rem}
-      .hero .lead{font-size:1.15rem;max-width:700px;margin:0 auto 2rem;opacity:.95}
-      .hero-cta .btn{margin:.5rem;box-shadow:0 4px 16px -4px rgba(0,0,0,.25)}
+      @keyframes fluid-gradient{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+      @keyframes float-blob{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(30px,-30px) scale(1.1)}66%{transform:translate(-20px,20px) scale(0.9)}}
+      .hero{background:linear-gradient(-45deg,#1e3a8a,#3b82f6,#8b5cf6,#a855f7,#ec4899);background-size:400% 400%;animation:fluid-gradient 15s ease infinite;color:#fff;position:relative;overflow:hidden;padding:5rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
+      .hero:before{content:"";position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(59,130,246,.3) 0%,transparent 50%);animation:float-blob 20s ease-in-out infinite;pointer-events:none;}
+      .hero:after{content:"";position:absolute;top:-50%;right:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(168,85,247,.25) 0%,transparent 50%);animation:float-blob 25s ease-in-out infinite reverse;pointer-events:none;}
+      .hero h1{font-size:clamp(2.25rem,5vw,3.75rem);margin-bottom:1.5rem;font-weight:700;text-shadow:0 2px 20px rgba(0,0,0,.3);line-height:1.2;position:relative;z-index:1}
+      .hero .lead{font-size:clamp(1.1rem,2.5vw,1.35rem);max-width:750px;margin:0 auto 2.5rem;font-weight:400;text-shadow:0 2px 10px rgba(0,0,0,.4);line-height:1.6;color:#f8f9fa;position:relative;z-index:1}
+      .hero-cta{position:relative;z-index:1}
+      .hero-cta .btn{margin:.5rem;box-shadow:0 4px 20px -4px rgba(0,0,0,.4);font-size:1.1rem;padding:.75rem 2rem;font-weight:600}
       .section-title{font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1rem;color:var(--text)}
       .section-subtitle{font-size:1.1rem;color:#666;margin-bottom:2.5rem;max-width:700px}
       .service-card{background:#fff;border-radius:var(--radius);padding:2rem;margin-bottom:2rem;box-shadow:0 4px 14px -6px rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.05);transition:.3s;height:100%;display:flex;flex-direction:column}
@@ -52,14 +56,14 @@
       .package-card ul{list-style:none;padding:0;margin:1.5rem 0;text-align:left}
       .package-card ul li{padding:.4rem 0;position:relative;padding-left:1.5rem}
       .package-card ul li:before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:700}
-      .testimonial-card{background:#fff;border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem;box-shadow:0 4px 14px -6px rgba(0,0,0,.1);position:relative;border:1px solid rgba(0,0,0,.05)}
-      .testimonial-card:before{content:""";font-size:3rem;line-height:1;color:var(--brand);position:absolute;top:10px;left:20px;opacity:.2}
-      .testimonial-text{font-style:italic;margin-bottom:1rem;color:#444;padding-left:1rem}
-      .testimonial-author{font-weight:600;color:var(--text)}
+      .testimonial-card{background:#fff;border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem;box-shadow:0 4px 14px -6px rgba(0,0,0,.1);position:relative;border:1px solid rgba(0,0,0,.05);}
+      .testimonial-card:before{content:""";font-size:3rem;line-height:1;color:var(--brand);position:absolute;top:10px;left:20px;opacity:.2;}
+      .testimonial-text{font-style:italic;margin-bottom:1rem;color:#444;padding-left:1rem;}
+      .testimonial-author{font-weight:600;color:var(--text);}
       .cta-section{background:var(--gradient);color:#fff;padding:4rem 0;border-radius:var(--radius);margin:3rem 0;position:relative;overflow:hidden}
-      .cta-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 40%,rgba(255,255,255,.3),transparent 70%);mix-blend-mode:overlay}
+      .cta-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 40%,rgba(255,255,255,.3),transparent 70%);mix-blend-mode:overlay;pointer-events:none}
       .cta-section h2{font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1rem}
-      .cta-section .btn{margin:.5rem}
+      .cta-section .btn{margin:.5rem;margin-bottom:.75rem}
       .image-placeholder{background:linear-gradient(135deg,#e9ecef,#dee2e6);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#6c757d;font-weight:600;min-height:300px;border:2px dashed #adb5bd;margin-bottom:2rem}
       .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin:2rem 0}
       .portfolio-item{position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:0 4px 14px -6px rgba(0,0,0,.1);transition:.3s}
@@ -124,8 +128,7 @@
           <h1>Bring Your Brand to Life — Online & Offline</h1>
           <p class="lead">Professional design, website development, and branding services to help your business stand out, connect, and grow.</p>
           <div class="hero-cta">
-            <a href="contact.html" class="btn btn-light btn-lg">Start Your Project →</a>
-            <a href="contact.html" class="btn btn-outline-light btn-lg">Request a Free Consultation →</a>
+            <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
           </div>
         </div>
       </section>
@@ -369,41 +372,25 @@
               <h2>Ready to Get Started?</h2>
               <p class="lead mb-4">Whether you need a simple logo, a full brand identity, or a complete website — we're here to help.</p>
               <div>
-                <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now →</a>
-                <a href="contact.html" class="btn btn-outline-light btn-lg">Book a Free Consultation →</a>
+                <a href="contact.html" class="btn btn-primary btn-lg">Start Your Project</a>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      <footer class="footer bg-dark text-white py-4 mt-5">
+      <footer class="py-4 bg-dark text-white">
         <div class="container">
-          <div class="row">
-            <div class="col-md-4 mb-3">
-              <h5>PrintSmith</h5>
-              <p class="small">Quality printing and custom branded products delivered across Ireland.</p>
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center text-md-start mb-2 mb-md-0">
+              <small>© PrintSmith 2025</small>
             </div>
-            <div class="col-md-4 mb-3">
-              <h5>Quick Links</h5>
-              <ul class="list-unstyled">
-                <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
-                <li><a href="design-website.html" class="text-white-50 text-decoration-none">Design & Website</a></li>
-                <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
-                <li><a href="faq.html" class="text-white-50 text-decoration-none">FAQ</a></li>
-              </ul>
+            <div class="col-md-4 text-center mb-2 mb-md-0">
+              <small>VAT: IE04334454RH</small>
             </div>
-            <div class="col-md-4 mb-3">
-              <h5>Legal</h5>
-              <ul class="list-unstyled">
-                <li><a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
-                <li><a href="terms.html" class="text-white-50 text-decoration-none">Terms & Conditions</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="row mt-3">
-            <div class="col text-center">
-              <p class="small mb-0">&copy; 2024 PrintSmith. All rights reserved.</p>
+            <div class="col-md-4 text-center text-md-end">
+              <a href="privacy.html" class="text-white text-decoration-none me-3">Privacy</a>
+              <a href="terms.html" class="text-white text-decoration-none">Terms</a>
             </div>
           </div>
         </div>
