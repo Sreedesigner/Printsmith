@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <title>Design & Website Services — PrintSmith</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/contact-links.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cookie-consent.css">
+    <link rel="preload" as="image" href="assets/img/printsmithlogo.png">
+    <meta name="description" content="Professional design, website development, and branding services in Ireland. Logo design, brand identity, business websites, e-commerce, and custom design solutions."/>
+    <link rel="canonical" href="https://printsmith.ie/design-website.html">
+    <meta property="og:title" content="Design & Website Services — PrintSmith"/>
+    <meta property="og:description" content="Professional design, website development, and branding services to help your business stand out, connect, and grow."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://printsmith.ie/design-website.html"/>
+    <meta property="og:image" content="https://printsmith.ie/assets/img/printsmithlogo.png"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <style>
+      :root{--brand:#0d6efd;--brand-dark:#0b5ed7;--brand-accent:#6610f2;--text:#222;--bg:#F0ECE3;--radius:.75rem;--gradient:linear-gradient(135deg,#0d6efd 0%,#6610f2 80%);}    
+      body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--text);}  
+      h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.15;letter-spacing:.3px}
+      .hero{background:var(--gradient);color:#fff;position:relative;overflow:hidden;padding:4rem 0;border-bottom:1px solid rgba(255,255,255,.15)}
+      .hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.25),transparent 60%);mix-blend-mode:overlay;}
+      .hero h1{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1.25rem}
+      .hero .lead{font-size:1.15rem;max-width:700px;margin:0 auto 2rem;opacity:.95}
+      .hero-cta .btn{margin:.5rem;box-shadow:0 4px 16px -4px rgba(0,0,0,.25)}
+      .section-title{font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1rem;color:var(--text)}
+      .section-subtitle{font-size:1.1rem;color:#666;margin-bottom:2.5rem;max-width:700px}
+      .service-card{background:#fff;border-radius:var(--radius);padding:2rem;margin-bottom:2rem;box-shadow:0 4px 14px -6px rgba(0,0,0,.1);border:1px solid rgba(0,0,0,.05);transition:.3s;height:100%;display:flex;flex-direction:column}
+      .service-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px -8px rgba(0,0,0,.18)}
+      .service-card h3{color:var(--brand);margin-bottom:1rem;font-size:1.5rem}
+      .service-card ul{list-style:none;padding:0;flex-grow:1}
+      .service-card ul li{padding:.4rem 0;position:relative;padding-left:1.5rem}
+      .service-card ul li:before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:700}
+      .feature-box{background:#fff;border-radius:var(--radius);padding:1.75rem;text-align:center;border:1px solid rgba(0,0,0,.05);box-shadow:0 2px 8px rgba(0,0,0,.06);height:100%;transition:.3s}
+      .feature-box:hover{transform:translateY(-4px);box-shadow:0 8px 20px -6px rgba(0,0,0,.15)}
+      .feature-box h4{color:var(--brand);margin-bottom:.75rem;font-size:1.25rem}
+      .feature-icon{width:60px;height:60px;margin:0 auto 1rem;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0d6efd,#6610f2);border-radius:50%;color:#fff;font-size:1.5rem}
+      .process-step{background:#fff;border-radius:var(--radius);padding:1.5rem;margin-bottom:1.5rem;border-left:4px solid var(--brand);box-shadow:0 2px 8px rgba(0,0,0,.06)}
+      .process-step h4{color:var(--brand);margin-bottom:.5rem}
+      .process-number{display:inline-block;width:36px;height:36px;background:var(--gradient);color:#fff;border-radius:50%;text-align:center;line-height:36px;font-weight:700;margin-right:.75rem}
+      .package-card{background:#fff;border-radius:var(--radius);padding:2rem;text-align:center;border:2px solid rgba(0,0,0,.08);transition:.3s;height:100%}
+      .package-card:hover{border-color:var(--brand);transform:translateY(-6px);box-shadow:0 12px 32px -10px rgba(13,110,253,.3)}
+      .package-card h3{color:var(--brand);margin-bottom:.5rem;font-size:1.75rem}
+      .package-card .subtitle{color:#666;font-size:.95rem;margin-bottom:1.5rem}
+      .package-card ul{list-style:none;padding:0;margin:1.5rem 0;text-align:left}
+      .package-card ul li{padding:.4rem 0;position:relative;padding-left:1.5rem}
+      .package-card ul li:before{content:"✓";position:absolute;left:0;color:var(--brand);font-weight:700}
+      .testimonial-card{background:#fff;border-radius:var(--radius);padding:2rem;margin-bottom:1.5rem;box-shadow:0 4px 14px -6px rgba(0,0,0,.1);position:relative;border:1px solid rgba(0,0,0,.05)}
+      .testimonial-card:before{content:""";font-size:3rem;line-height:1;color:var(--brand);position:absolute;top:10px;left:20px;opacity:.2}
+      .testimonial-text{font-style:italic;margin-bottom:1rem;color:#444;padding-left:1rem}
+      .testimonial-author{font-weight:600;color:var(--text)}
+      .cta-section{background:var(--gradient);color:#fff;padding:4rem 0;border-radius:var(--radius);margin:3rem 0;position:relative;overflow:hidden}
+      .cta-section:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 15% 40%,rgba(255,255,255,.3),transparent 70%);mix-blend-mode:overlay}
+      .cta-section h2{font-size:clamp(1.75rem,3vw,2.5rem);margin-bottom:1rem}
+      .cta-section .btn{margin:.5rem}
+      .image-placeholder{background:linear-gradient(135deg,#e9ecef,#dee2e6);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:#6c757d;font-weight:600;min-height:300px;border:2px dashed #adb5bd;margin-bottom:2rem}
+      .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin:2rem 0}
+      .portfolio-item{position:relative;overflow:hidden;border-radius:var(--radius);box-shadow:0 4px 14px -6px rgba(0,0,0,.1);transition:.3s}
+      .portfolio-item:hover{transform:translateY(-6px);box-shadow:0 12px 28px -8px rgba(0,0,0,.18)}
+    </style>
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none" aria-hidden="true">
+      <symbol id="envelope" viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+      </symbol>
+      <symbol id="phone" viewBox="0 0 16 16">
+        <path d="M3.654 1.328a.678.678 0 0 1 .738-.088l2.522 1.262a.678.678 0 0 1 .291.918l-.805 1.612a.678.678 0 0 1-.746.36l-1.517-.303a11.12 11.12 0 0 0 4.515 4.515l.303-1.517a.678.678 0 0 1 .36-.746l1.612-.805a.678.678 0 0 1 .918.291l1.262 2.522a.678.678 0 0 1-.088.738l-1.272 1.272c-.278.278-.67.38-1.02.282a15.533 15.533 0 0 1-9.14-9.14c-.097-.35.004-.743.282-1.02Z" />
+      </symbol>
+    </svg>
+    <div id="app">
+      <header class="top-header">
+        <div class="container d-flex align-items-center justify-content-between py-2">
+          <a href="index.html" aria-label="Go to home" class="d-inline-flex align-items-center">
+            <img src="assets/img/printsmithlogo.png" alt="PrintSmith logo" class="site-logo" fetchpriority="high" />
+          </a>
+          <div class="contact-links">
+            <a href="tel:+353894115060" class="contact-link"><span class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="#phone" href="#phone"/></svg></span> +353 89 411 5060</a>
+            <a href="mailto:contact@printsmith.ie" class="contact-link ms-3"><span class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="#envelope" href="#envelope"/></svg></span> contact@printsmith.ie</a>
+          </div>
+        </div>
+      </header>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="#" aria-label="PrintSmith"><span class="visually-hidden">PrintSmith</span></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="book-publishing.html">Book Publishing</a></li>
+              <li class="nav-item"><a class="nav-link" href="corporate-gift-sets.html">Corporate Gift Sets</a></li>
+              <li class="nav-item"><a class="nav-link" href="diaries-planners.html">2026 Diaries & Planners</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Printing</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="labels-stickers.html">Labels & Stickers</a></li>
+                  <li><a class="dropdown-item" href="business-cards.html">Business Cards</a></li>
+                  <li><a class="dropdown-item" href="banners.html">Banners</a></li>
+                  <li><a class="dropdown-item" href="flyers.html">Flyers</a></li>
+                  <li><a class="dropdown-item" href="booklets.html">Booklets</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link active" href="design-website.html">Design & Website</a></li>
+              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="container text-center">
+          <h1>Bring Your Brand to Life — Online & Offline</h1>
+          <p class="lead">Professional design, website development, and branding services to help your business stand out, connect, and grow.</p>
+          <div class="hero-cta">
+            <a href="contact.html" class="btn btn-light btn-lg">Start Your Project →</a>
+            <a href="contact.html" class="btn btn-outline-light btn-lg">Request a Free Consultation →</a>
+          </div>
+        </div>
+      </section>
+
+      <main>
+        <!-- SECTION 1 — What We Do -->
+        <section class="container my-5 py-4">
+          <div class="text-center mb-5">
+            <h2 class="section-title">What We Do</h2>
+            <p class="section-subtitle mx-auto">From branding to websites, we create professional solutions that help your business succeed.</p>
+          </div>
+
+          <div class="row">
+            <!-- Design & Branding -->
+            <div class="col-lg-6 mb-4">
+              <div class="service-card">
+                <h3>Design & Branding</h3>
+                <p>From business cards to full brand identity systems, we design visuals that represent your business with clarity, consistency, and style.</p>
+                <h5 class="mt-3 mb-2">Our design services include:</h5>
+                <ul>
+                  <li>Logo & brand identity</li>
+                  <li>Business cards, flyers, brochures</li>
+                  <li>Magazine & book design</li>
+                  <li>Packaging design</li>
+                  <li>Social media graphics</li>
+                  <li>Website banners & digital ads</li>
+                  <li>Diary & planner design</li>
+                  <li>Custom printing design for any product</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Website Design & Development -->
+            <div class="col-lg-6 mb-4">
+              <div class="service-card">
+                <h3>Website Design & Development</h3>
+                <p>We build clean, professional, and mobile-friendly websites for businesses of all sizes.</p>
+                <h5 class="mt-3 mb-2">We create websites that are:</h5>
+                <ul>
+                  <li>Fast, responsive, and SEO-ready</li>
+                  <li>Tailored to your brand</li>
+                  <li>Easy to update and manage</li>
+                  <li>Designed to convert visitors into customers</li>
+                </ul>
+                <h5 class="mt-3 mb-2">Website types we build:</h5>
+                <ul>
+                  <li>Business & portfolio websites</li>
+                  <li>E-commerce stores</li>
+                  <li>Booking systems</li>
+                  <li>Personal brands & blogs</li>
+                  <li>Landing pages</li>
+                  <li>Custom solutions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2 — Why Choose Us? -->
+        <section class="container my-5 py-4">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Why Choose Us?</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-box">
+                <div class="feature-icon">🎨</div>
+                <h4>Design + Print + Web — All Under One Roof</h4>
+                <p>We are one of the few studios in Ireland that can handle your branding, website, and printing together — giving you a consistent brand across all platforms.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h4>Professional, Reliable, and Fast</h4>
+                <p>With years of design and print experience, you get quality work delivered on time.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-box">
+                <div class="feature-icon">🇮🇪</div>
+                <h4>Local Support, Personal Service</h4>
+                <p>Real communication, quick responses, and a team that understands small business needs.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-box">
+                <div class="feature-icon">💰</div>
+                <h4>Custom Solutions for Every Budget</h4>
+                <p>We tailor packages to suit startups, SMEs, and established businesses.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="feature-box">
+                <div class="feature-icon">✨</div>
+                <h4>Everything Your Brand Needs</h4>
+                <p>Logos, websites, content design, business stationery, packaging, and high-quality printing.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 3 — Our Process -->
+        <section class="container my-5 py-4">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Our Process</h2>
+            <p class="section-subtitle mx-auto">The steps are simple, transparent, and stress-free.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <div class="process-step">
+                <h4><span class="process-number">1</span>Discovery Call</h4>
+                <p>We understand your goals, brand, and requirements.</p>
+              </div>
+
+              <div class="process-step">
+                <h4><span class="process-number">2</span>Concept Creation</h4>
+                <p>We prepare design concepts or website structure options.</p>
+              </div>
+
+              <div class="process-step">
+                <h4><span class="process-number">3</span>Revisions</h4>
+                <p>We refine everything based on your feedback.</p>
+              </div>
+
+              <div class="process-step">
+                <h4><span class="process-number">4</span>Final Design / Website Build</h4>
+                <p>We deliver professional print-ready files or build your fully functional website.</p>
+              </div>
+
+              <div class="process-step">
+                <h4><span class="process-number">5</span>Launch / Delivery</h4>
+                <p>Website is launched or design files are handed over.</p>
+              </div>
+
+              <div class="process-step">
+                <h4><span class="process-number">6</span>Ongoing Support</h4>
+                <p>We offer optional maintenance, updates, printing, and additional design services.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 4 — Website Packages -->
+        <section class="container my-5 py-4">
+          <div class="text-center mb-5">
+            <h2 class="section-title">Website Packages</h2>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-lg-4">
+              <div class="package-card">
+                <h3>Starter Website</h3>
+                <p class="subtitle">Perfect for new businesses.</p>
+                <ul>
+                  <li>3–5 pages</li>
+                  <li>Mobile-friendly design</li>
+                  <li>Contact form</li>
+                  <li>Basic SEO setup</li>
+                  <li>Social media integration</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary mt-3">Request Pricing →</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="package-card">
+                <h3>Business Website</h3>
+                <p class="subtitle">Ideal for established companies.</p>
+                <ul>
+                  <li>6–10 pages</li>
+                  <li>Custom graphics & branding</li>
+                  <li>Advanced SEO features</li>
+                  <li>Copywriting support</li>
+                  <li>Blog setup</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary mt-3">Request Pricing →</a>
+              </div>
+            </div>
+
+            <div class="col-lg-4">
+              <div class="package-card">
+                <h3>E-Commerce Website</h3>
+                <p class="subtitle">Sell online with ease.</p>
+                <ul>
+                  <li>Product setup</li>
+                  <li>Secure checkout</li>
+                  <li>Stock management</li>
+                  <li>Payment gateway integration</li>
+                  <li>Training to manage the store</li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary mt-3">Book a Consultation →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 5 — Testimonials -->
+        <section class="container my-5 py-4">
+          <div class="text-center mb-5">
+            <h2 class="section-title">What Our Clients Say</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 mb-4">
+              <div class="testimonial-card">
+                <p class="testimonial-text">"I recently bought a set of NFC Business Cards from Sree in Printsmith. Instead of handing out printed business cards, customers can now tap my NFC business card and my contact details are saved directly to their phone. This is a really innovative product, that wows potential customers and helps me stand out and be memorable. The service and support from Sree was excellent."</p>
+                <p class="testimonial-author">— Danny Metadjer</p>
+                <p class="text-warning small mb-0">★★★★★</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="testimonial-card">
+                <p class="testimonial-text">"Printsmith (Sree) designed my 'smart' business card. She was lovely to deal with, the whole experience was simple and efficient, and she personally dropped the cards off at my house. Every time I have used my card, the reaction from people is priceless, without exception they have been incredibly impressed by the quality, the technology and the idea."</p>
+                <p class="testimonial-author">— Hugh McCallum</p>
+                <p class="text-warning small mb-0">★★★★★</p>
+              </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+              <div class="testimonial-card">
+                <p class="testimonial-text">"I had 100 business cards printed and was extremely pleased with the service provided by Sree from PrintSmith. She was professional, efficient, and delivered the order exactly to the specifications I requested. The turnaround time was remarkably quick, and the quality of the cards exceeded my expectations."</p>
+                <p class="testimonial-author">— Mark Sweetman</p>
+                <p class="text-warning small mb-0">★★★★★</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 6 — Ready to Get Started? -->
+        <section class="container my-5">
+          <div class="cta-section">
+            <div class="container text-center py-4">
+              <h2>Ready to Get Started?</h2>
+              <p class="lead mb-4">Whether you need a simple logo, a full brand identity, or a complete website — we're here to help.</p>
+              <div>
+                <a href="contact.html" class="btn btn-light btn-lg">Contact Us Now →</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg">Book a Free Consultation →</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <h5>PrintSmith</h5>
+              <p class="small">Quality printing and custom branded products delivered across Ireland.</p>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h5>Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="text-white-50 text-decoration-none">Home</a></li>
+                <li><a href="design-website.html" class="text-white-50 text-decoration-none">Design & Website</a></li>
+                <li><a href="contact.html" class="text-white-50 text-decoration-none">Contact</a></li>
+                <li><a href="faq.html" class="text-white-50 text-decoration-none">FAQ</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 mb-3">
+              <h5>Legal</h5>
+              <ul class="list-unstyled">
+                <li><a href="privacy.html" class="text-white-50 text-decoration-none">Privacy Policy</a></li>
+                <li><a href="terms.html" class="text-white-50 text-decoration-none">Terms & Conditions</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col text-center">
+              <p class="small mb-0">&copy; 2024 PrintSmith. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- WhatsApp Floating Button -->
+      <a href="https://wa.me/353894115060" class="whatsapp-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+          <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+        </svg>
+      </a>
+
+      <!-- Cookie Consent Banner -->
+      <div class="cookie-consent">
+        <div class="container">
+          <div class="cookie-consent-content">
+            <div class="cookie-consent-text">
+              <h3>🍪 We Value Your Privacy</h3>
+              <p>We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. Read our <a href="privacy.html">Privacy Policy</a> for more information.</p>
+            </div>
+            <div class="cookie-consent-buttons">
+              <button id="cookie-accept-all" class="cookie-consent-btn cookie-consent-btn-accept">Accept All</button>
+              <button id="cookie-reject-all" class="cookie-consent-btn cookie-consent-btn-reject">Reject All</button>
+              <button id="cookie-settings-btn" class="cookie-consent-btn cookie-consent-btn-settings">Cookie Settings</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cookie Settings Modal -->
+      <div class="cookie-settings-modal">
+        <div class="cookie-settings-content">
+          <div class="cookie-settings-header">
+            <h2>Cookie Settings</h2>
+            <button id="cookie-settings-close" class="cookie-settings-close" aria-label="Close">&times;</button>
+          </div>
+
+          <div class="cookie-category">
+            <div class="cookie-category-header">
+              <h3>Necessary Cookies</h3>
+              <label class="cookie-toggle">
+                <input type="checkbox" checked disabled>
+                <span class="cookie-toggle-slider"></span>
+              </label>
+            </div>
+            <p class="cookie-category-description">These cookies are essential for the website to function properly. They enable basic functions like page navigation and access to secure areas. The website cannot function properly without these cookies.</p>
+          </div>
+
+          <div class="cookie-category">
+            <div class="cookie-category-header">
+              <h3>Analytics Cookies</h3>
+              <label class="cookie-toggle">
+                <input type="checkbox" id="cookie-analytics">
+                <span class="cookie-toggle-slider"></span>
+              </label>
+            </div>
+            <p class="cookie-category-description">These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve our website's performance and user experience.</p>
+          </div>
+
+          <div class="cookie-category">
+            <div class="cookie-category-header">
+              <h3>Marketing Cookies</h3>
+              <label class="cookie-toggle">
+                <input type="checkbox" id="cookie-marketing">
+                <span class="cookie-toggle-slider"></span>
+              </label>
+            </div>
+            <p class="cookie-category-description">These cookies are used to track visitors across websites. They are used to display ads that are relevant and engaging for individual users, thereby making them more valuable for publishers and third-party advertisers.</p>
+          </div>
+
+          <div class="cookie-settings-actions">
+            <button id="cookie-save-preferences" class="cookie-consent-btn cookie-consent-btn-accept">Save Preferences</button>
+          </div>
+        </div>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+      <script src="assets/js/cookie-consent.js" defer></script>
+    </div>
+  </body>
+</html>

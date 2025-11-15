@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://printsmith.ie/sitemap.xml
