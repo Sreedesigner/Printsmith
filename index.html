@@ -26,6 +26,12 @@
       :root{--brand:#0d6efd;--brand-dark:#0b5ed7;--brand-accent:#6610f2;--text:#222;--bg:#F0ECE3;--radius:.75rem;--gradient:linear-gradient(135deg,#0d6efd 0%,#6610f2 80%);}    
       body{font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;line-height:1.6;background:var(--bg);color:var(--text);}  
       h1,h2,h3,h4,h5,h6{font-weight:700;line-height:1.15;letter-spacing:.3px}
+      /* Contact Ribbon */
+      .contact-ribbon{font-size:.875rem;border-bottom:1px solid rgba(255,255,255,.1)}
+      .contact-ribbon a{transition:opacity .2s}
+      .contact-ribbon a:hover{opacity:.8}
+      .top-header{background:var(--bg);box-shadow:0 1px 4px rgba(0,0,0,.05)}
+      /* Navigation */
       .navbar{box-shadow:0 2px 8px rgba(0,0,0,.06);backdrop-filter:saturate(1.2) blur(6px);position:relative;z-index:1030}
       .navbar .nav-link{font-weight:500;padding:.55rem .95rem;position:relative}
       .navbar .nav-link.active{background:rgba(255,255,255,.25);border-radius:.5rem}
@@ -89,15 +95,27 @@
       </symbol>
     </svg>
     <div id="app">
+      <!-- Contact Ribbon -->
+      <div class="contact-ribbon bg-dark text-white">
+        <div class="container">
+          <div class="d-flex justify-content-center align-items-center py-2">
+            <a href="tel:+353894115060" class="text-white text-decoration-none me-3 d-inline-flex align-items-center gap-1">
+              <svg width="14" height="14" fill="currentColor" class="flex-shrink-0"><use xlink:href="#phone" href="#phone"/></svg>
+              <span>+353 89 411 5060</span>
+            </a>
+            <a href="mailto:contact@printsmith.ie" class="text-white text-decoration-none d-inline-flex align-items-center gap-1">
+              <svg width="14" height="14" fill="currentColor" class="flex-shrink-0"><use xlink:href="#envelope" href="#envelope"/></svg>
+              <span>contact@printsmith.ie</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
       <header class="top-header">
-        <div class="container d-flex align-items-center justify-content-between py-2">
+        <div class="container d-flex align-items-center justify-content-center py-3">
           <a href="index.html" aria-label="Go to home" class="d-inline-flex align-items-center">
             <img src="assets/img/printsmithlogo.png" alt="PrintSmith logo" class="site-logo" fetchpriority="high" />
           </a>
-          <div class="contact-links">
-            <a href="tel:+353894115060" class="contact-link"><span class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="#phone" href="#phone"/></svg></span> +353 89 411 5060</a>
-            <a href="mailto:contact@printsmith.ie" class="contact-link ms-3"><span class="icon"><svg aria-hidden="true" focusable="false"><use xlink:href="#envelope" href="#envelope"/></svg></span> contact@printsmith.ie</a>
-          </div>
         </div>
       </header>
 
@@ -297,7 +315,7 @@
               <li><span class="check">✓</span>Multiple paper & binding choices</li>
             </ul>
             <a href="book-publishing.html" class="btn btn-primary me-2 mb-2 mb-sm-0">Learn more</a>
-            <a href="contact.html" class="btn btn-outline-primary">Start a quote</a>
+            <a href="contact.html" class="btn btn-outline-primary mb-2 mb-sm-0">Start a quote</a>
           </div>
         </div>
       </div>
@@ -320,7 +338,7 @@
               <li><span class="check">✓</span>Presentation packaging</li>
             </ul>
             <a href="corporate-gift-sets.html" class="btn btn-primary me-2 mb-2 mb-sm-0">View sets</a>
-            <a href="contact.html" class="btn btn-outline-primary">Enquire</a>
+            <a href="contact.html" class="btn btn-outline-primary mb-2 mb-sm-0">Enquire</a>
           </div>
         </div>
       </div>
@@ -343,7 +361,7 @@
               <li><span class="check">✓</span>SEO-ready & mobile-friendly</li>
             </ul>
             <a href="design-website.html" class="btn btn-primary me-2 mb-2 mb-sm-0">View services</a>
-            <a href="contact.html" class="btn btn-outline-primary">Get started</a>
+            <a href="contact.html" class="btn btn-outline-primary mb-2 mb-sm-0">Get started</a>
           </div>
         </div>
       </div>
