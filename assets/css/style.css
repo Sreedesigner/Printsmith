@@ -39,6 +39,10 @@ a:hover { text-decoration: underline; }
 /* Prevent underline on hover specifically for navbar links */
 .navbar .nav-link:hover { text-decoration: none; }
 
+/* Navbar and dropdown z-index fix */
+.navbar { z-index: 1030; }
+.dropdown-menu { z-index: 1031; }
+
 header img{
   max-width: 320px;
 }
@@ -76,8 +80,8 @@ main .book-pub-image {
   background: rgba(255,255,255,0.25);
   border-radius: .5rem;
 }
-/* Suppress legacy active underline pseudo-element */
-.navbar .nav-link.active:after { display: none; }
+/* Suppress legacy active underline pseudo-element (but not dropdown arrows) */
+.navbar .nav-link.active:not(.dropdown-toggle):after { display: none; }
 
 /* Buttons */
 .btn { border-radius: .5rem; font-weight: 600; }
