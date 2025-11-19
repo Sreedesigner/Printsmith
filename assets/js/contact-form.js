@@ -5,11 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     
     if (!form) {
-        console.error('Contact form not found!');
         return;
     }
-    
-    console.log('Contact form initialized');
     
     const submitButton = form.querySelector('button[type="submit"]');
     const alertContainer = document.getElementById('formAlert');
@@ -53,7 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Form submit handler
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        console.log('Form submitted');
         clearAlert();
 
         // Get form data
@@ -66,32 +62,26 @@ document.addEventListener('DOMContentLoaded', function() {
             message: document.getElementById('message').value.trim(),
             website: document.querySelector('input[name="website"]').value // Honeypot
         };
-        
-        console.log('Form data:', { ...formData, website: '[hidden]' });
 
         // Honeypot check - if filled, it's likely spam
         if (formData.website) {
-            console.log('Honeypot triggered - spam detected');
             showAlert('danger', 'Form submission failed. Please try again.');
             return;
         }
 
         // Validate required fields
         if (!formData.name || !formData.email || !formData.message) {
-            console.log('Validation failed - missing required fields');
             showAlert('danger', 'Please fill in all required fields.');
             return;
         }
 
         // Validate email
         if (!validEmail(formData.email)) {
-            console.log('Validation failed - invalid email');
             showAlert('danger', 'Please enter a valid email address.');
             return;
         }
 
         setLoading(true);
-        console.log('Sending to API:', API_ENDPOINT);
 
         try {
             const response = await fetch(API_ENDPOINT, {
@@ -101,12 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify(formData)
             });
-            
-            console.log('Response status:', response.status);
-            console.log('Response headers:', [...response.headers.entries()]);
 
             const result = await response.json();
-            console.log('Response data:', result);
 
             if (response.ok) {
                 showAlert('success', 'Thank you! Your message has been sent successfully. We\'ll get back to you soon.');
@@ -115,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 showAlert('danger', result.message || 'There was an error sending your message. Please try again.');
             }
         } catch (error) {
-            console.error('Form submission error:', error);
             showAlert('danger', 'There was an error sending your message. Please try again or contact us directly at contact@printsmith.ie');
         } finally {
             setLoading(false);

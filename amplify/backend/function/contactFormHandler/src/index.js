@@ -1,10 +1,10 @@
-const AWS = require('aws-sdk');
-const ses = new AWS.SES({ region: 'eu-west-1' }); // Change to your preferred AWS region
+const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
+const sesClient = new SESClient({ region: 'eu-west-1' });
 
 exports.handler = async (event) => {
     // CORS headers
     const headers = {
-        'Access-Control-Allow-Origin': '*', // Update with your domain in production
+        'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Headers': 'Content-Type',
         'Access-Control-Allow-Methods': 'POST, OPTIONS'
     };
@@ -131,7 +131,8 @@ ${new Date().toLocaleString('en-IE', { timeZone: 'Europe/Dublin' })}
         };
 
         // Send email via SES
-        await ses.sendEmail(params).promise();
+        const command = new SendEmailCommand(params);
+        await sesClient.send(command);
 
         return {
             statusCode: 200,
