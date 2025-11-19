@@ -1,5 +1,5 @@
 // Contact Form Handler with AWS API Gateway
-const API_ENDPOINT = 'YOUR_API_GATEWAY_ENDPOINT_HERE'; // You'll get this after deploying
+const API_ENDPOINT = 'https://7irxhtntx0.execute-api.eu-west-1.amazonaws.com/prod/contact'; // You'll get this after deploying
 
 const contactForm = {
     form: {
