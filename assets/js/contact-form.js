@@ -54,13 +54,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Get form data
         const formData = {
-            name: document.getElementById('name').value.trim(),
-            email: document.getElementById('email').value.trim(),
-            phone: document.getElementById('phone').value.trim(),
-            company: document.getElementById('company').value.trim(),
-            subject: document.getElementById('subject').value,
-            message: document.getElementById('message').value.trim(),
-            website: document.querySelector('input[name="website"]').value // Honeypot
+            name: document.getElementById('name')?.value?.trim() || '',
+            email: document.getElementById('email')?.value?.trim() || '',
+            phone: document.getElementById('phone')?.value?.trim() || '',
+            company: document.getElementById('company')?.value?.trim() || '',
+            subject: document.getElementById('subject')?.value || 'general',
+            message: document.getElementById('message')?.value?.trim() || '',
+            website: document.querySelector('input[name="website"]')?.value || '' // Honeypot
         };
 
         // Honeypot check - if filled, it's likely spam
