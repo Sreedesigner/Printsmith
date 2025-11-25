@@ -147,12 +147,27 @@
             <!-- Left: Media Gallery -->
             <div class="col-12 col-md-6">
               <div class="video-portrait large mb-3">
+                <video id="mainVideo" controls preload="metadata" playsinline style="display: none; width: 100%; height: 100%; object-fit: contain; background: #000;">
+                  <source src="assets/img/Diaries2026/Diary_video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
                 <img id="mainImage" src="assets/img/Diaries2026/IMG-20251106-WA000.jpg" alt="2026 Diary - Premium Cover Design" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #000;">
               </div>
               
               <!-- Thumbnail Gallery -->
               <div class="position-relative">
                 <div id="thumbnailGallery" class="d-flex gap-3 overflow-auto pb-2" style="scrollbar-width: thin; scroll-behavior: smooth;">
+                  <div class="position-relative video-portrait thumb flex-shrink-0">
+                    <video preload="metadata" muted playsinline style="cursor: pointer; width: 100%; height: 100%; object-fit: cover;" onclick="showVideo()">
+                      <source src="assets/img/Diaries2026/Diary_video.mp4" type="video/mp4">
+                    </video>
+                    <div class="position-absolute top-50 start-50 translate-middle" style="pointer-events: none;">
+                      <svg width="48" height="48" fill="white" opacity="0.9">
+                        <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.6)"/>
+                        <polygon points="18,14 18,34 34,24" fill="white"/>
+                      </svg>
+                    </div>
+                  </div>
                   <div class="video-portrait thumb flex-shrink-0">
                     <img src="assets/img/Diaries2026/IMG-20251106-WA000.jpg" alt="Premium Cover Design" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
                   </div>
@@ -273,51 +288,116 @@
       let currentIndex = 0;
       let autoRotateInterval;
       const mediaItems = [
-        { src: 'assets/img/Diaries2026/IMG-20251106-WA000.jpg', alt: 'Premium Cover Design' },
-        { src: 'assets/img/Diaries2026/IMG-20251106-WA0001.jpg', alt: 'Daily Planner Pages' },
-        { src: 'assets/img/Diaries2026/IMG-20251107-WA0012.jpg', alt: 'Monthly Overview Layout' },
-        { src: 'assets/img/Diaries2026/IMG-20251107-WA0019.jpg', alt: 'Quality Binding' },
-        { src: 'assets/img/Diaries2026/IMG-20251107-WA0020.jpg', alt: 'Interior Pages' },
-        { src: 'assets/img/Diaries2026/IMG-20251107-WA0021.jpg', alt: 'Customization Options' }
+        { type: 'video', src: 'assets/img/Diaries2026/Diary_video.mp4', alt: '2026 Diary Video' },
+        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251106-WA000.jpg', alt: 'Premium Cover Design' },
+        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251106-WA0001.jpg', alt: 'Daily Planner Pages' },
+        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0012.jpg', alt: 'Monthly Overview Layout' },
+        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0019.jpg', alt: 'Quality Binding' },
+        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0020.jpg', alt: 'Interior Pages' },
+        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0021.jpg', alt: 'Customization Options' }
       ];
 
       function showImage(src, alt) {
         const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        // Stop auto-rotate when user manually selects
         clearInterval(autoRotateInterval);
+        
+        mainVideo.style.display = 'none';
+        mainVideo.pause();
         mainImage.style.display = 'block';
         mainImage.src = src;
         mainImage.alt = alt;
+        
+        // Update currentIndex
+        currentIndex = mediaItems.findIndex(item => item.src === src);
       }
-
+      
+      function showVideo() {
+        const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        // Stop auto-rotate when user manually selects
+        clearInterval(autoRotateInterval);
+        
+        mainImage.style.display = 'none';
+        mainVideo.style.display = 'block';
+        mainVideo.load();
+        mainVideo.play().catch(() => {});
+        
+        // Resume auto-rotate after video ends
+        mainVideo.onended = function() {
+          startAutoRotate();
+        };
+        
+        // Update currentIndex
+        currentIndex = 0;
+      }
+      
+      function showCurrentMedia() {
+        const item = mediaItems[currentIndex];
+        if (item.type === 'video') {
+          showVideoAuto();
+        } else {
+          showImageAuto(item.src, item.alt);
+        }
+      }
+      
       function showNextMedia() {
         currentIndex = (currentIndex + 1) % mediaItems.length;
-        const item = mediaItems[currentIndex];
-        showImageAuto(item.src, item.alt);
+        showCurrentMedia();
       }
-
+      
       function showImageAuto(src, alt) {
         const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        mainVideo.style.display = 'none';
+        mainVideo.pause();
         mainImage.style.display = 'block';
         mainImage.src = src;
         mainImage.alt = alt;
       }
-
+      
+      function showVideoAuto() {
+        const mainImage = document.getElementById('mainImage');
+        const mainVideo = document.getElementById('mainVideo');
+        
+        mainImage.style.display = 'none';
+        mainVideo.style.display = 'block';
+        mainVideo.load();
+        
+        // Auto-play video
+        mainVideo.play().catch(() => {});
+        
+        // When video ends, continue auto-rotation
+        mainVideo.onended = function() {
+          // Small delay before showing next item
+          setTimeout(showNextMedia, 500);
+        };
+      }
+      
       function startAutoRotate() {
         clearInterval(autoRotateInterval);
         autoRotateInterval = setInterval(showNextMedia, 3000); // Change every 3 seconds
       }
-
+      
       function scrollThumbnails(direction) {
         const gallery = document.getElementById('thumbnailGallery');
         const scrollAmount = 200;
+        
         if (direction === 'left') {
           gallery.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
         } else {
           gallery.scrollBy({ left: scrollAmount, behavior: 'smooth' });
         }
       }
-
+      
+      // Start auto-rotation when page loads
       document.addEventListener('DOMContentLoaded', function() {
+        currentIndex = 0;
+        showCurrentMedia();
         startAutoRotate();
       });
     </script>
