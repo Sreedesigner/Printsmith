@@ -12,7 +12,7 @@
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="icon" type="image/png" href="assets/img/favicon.png" />
-  <title>2026 Diaries – PrintSmith</title>
+  <title>Planners – PrintSmith</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/contact-links.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,13 +21,13 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="stylesheet" href="assets/css/cookie-consent.css">
   <link rel="preload" as="image" href="assets/img/printsmithlogo.png">
-  <meta name="description" content="Premium 2026 diaries with customizable options. Perfect for personal and professional use with quality materials and elegant designs.">
-  <link rel="canonical" href="https://printsmith.ie/2026-diaries.html">
-  <meta property="og:title" content="2026 Diaries – PrintSmith" />
-  <meta property="og:description" content="High-quality 2026 diaries for planning and organization. Choose from various sizes, formats, and customization options." />
+  <meta name="description" content="Premium planners with customizable layouts. Perfect for goal setting, project management, and daily organization with quality materials.">
+  <link rel="canonical" href="https://printsmith.ie/planners.html">
+  <meta property="og:title" content="Planners – PrintSmith" />
+  <meta property="og:description" content="High-quality planners for organization and productivity. Choose from various layouts, formats, and customization options." />
   <meta property="og:type" content="product" />
-  <meta property="og:url" content="https://printsmith.ie/2026-diaries.html" />
-  <meta property="og:image" content="https://printsmith.ie/assets/img/Diaries2026/IMG-20251106-WA000.jpg" />
+  <meta property="og:url" content="https://printsmith.ie/planners.html" />
+  <meta property="og:image" content="https://printsmith.ie/assets/img/Planners/JPP-10.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <!-- Structured Data: Product & Breadcrumb -->
@@ -45,8 +45,8 @@
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "2026 Diaries",
-        "item": "https://printsmith.ie/2026-diaries.html"
+        "name": "Planners",
+        "item": "https://printsmith.ie/planners.html"
       }
     ]
   }
@@ -55,16 +55,16 @@
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "2026 Diaries",
-    "image": "https://printsmith.ie/assets/img/Diaries2026/IMG-20251106-WA000.jpg",
-    "description": "Premium 2026 diaries with customizable options for personal and professional use.",
+    "name": "Planners",
+    "image": "https://printsmith.ie/assets/img/Planners/JPP-10.png",
+    "description": "Premium planners with customizable layouts for goal setting, project management, and daily organization.",
     "brand": {"@type": "Brand", "name": "PrintSmith"},
     "category": "Stationery",
-    "url": "https://printsmith.ie/2026-diaries.html",
+    "url": "https://printsmith.ie/planners.html",
     "offers": {
       "@type": "Offer",
       "availability": "https://schema.org/InStock",
-      "url": "https://printsmith.ie/2026-diaries.html"
+      "url": "https://printsmith.ie/planners.html"
     }
   }
   </script>
@@ -139,7 +139,7 @@
         <nav aria-label="breadcrumb" class="mt-3">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="diaries-planners.html">2026 Diaries & Planners</a></li>
-            <li class="breadcrumb-item active" aria-current="page">2026 Diaries</li>
+            <li class="breadcrumb-item active" aria-current="page">Planners</li>
           </ol>
         </nav>
 
@@ -148,44 +148,23 @@
             <!-- Left: Media Gallery -->
             <div class="col-12 col-md-6">
               <div class="video-portrait large mb-3">
-                <video id="mainVideo" controls preload="metadata" playsinline style="display: none; width: 100%; height: 100%; object-fit: contain; background: #000;">
-                  <source src="assets/img/Diaries2026/Diary_video.mp4" type="video/mp4">
-                  Your browser does not support the video tag.
-                </video>
-                <img id="mainImage" src="assets/img/Diaries2026/IMG-20251106-WA000.jpg" alt="2026 Diary - Premium Cover Design" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #000;">
+                <img id="mainImage" src="assets/img/Planners/JPP-10.png" alt="Planner Layout Design" style="width: 100%; height: 100%; object-fit: contain; display: block; background: #000;">
               </div>
               
               <!-- Thumbnail Gallery -->
               <div class="position-relative">
                 <div id="thumbnailGallery" class="d-flex gap-3 overflow-auto pb-2" style="scrollbar-width: thin; scroll-behavior: smooth;">
-                  <div class="position-relative video-portrait thumb flex-shrink-0">
-                    <video preload="metadata" muted playsinline style="cursor: pointer; width: 100%; height: 100%; object-fit: cover;" onclick="showVideo()">
-                      <source src="assets/img/Diaries2026/Diary_video.mp4" type="video/mp4">
-                    </video>
-                    <div class="position-absolute top-50 start-50 translate-middle" style="pointer-events: none;">
-                      <svg width="48" height="48" fill="white" opacity="0.9">
-                        <circle cx="24" cy="24" r="24" fill="rgba(0,0,0,0.6)"/>
-                        <polygon points="18,14 18,34 34,24" fill="white"/>
-                      </svg>
-                    </div>
+                  <div class="video-portrait thumb flex-shrink-0">
+                    <img src="assets/img/Planners/JPP-10.png" alt="Planner Layout Design" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
                   </div>
                   <div class="video-portrait thumb flex-shrink-0">
-                    <img src="assets/img/Diaries2026/IMG-20251106-WA000.jpg" alt="Premium Cover Design" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
+                    <img src="assets/img/Planners/JPP-36.png" alt="Planner Page Layout" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
                   </div>
                   <div class="video-portrait thumb flex-shrink-0">
-                    <img src="assets/img/Diaries2026/IMG-20251106-WA0001.jpg" alt="Daily Planner Pages" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
+                    <img src="assets/img/Planners/JPP-44.jpeg" alt="Planner Weekly Spread" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
                   </div>
                   <div class="video-portrait thumb flex-shrink-0">
-                    <img src="assets/img/Diaries2026/IMG-20251107-WA0012.jpg" alt="Monthly Overview Layout" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
-                  </div>
-                  <div class="video-portrait thumb flex-shrink-0">
-                    <img src="assets/img/Diaries2026/IMG-20251107-WA0019.jpg" alt="Quality Binding" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
-                  </div>
-                  <div class="video-portrait thumb flex-shrink-0">
-                    <img src="assets/img/Diaries2026/IMG-20251107-WA0020.jpg" alt="Interior Pages" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
-                  </div>
-                  <div class="video-portrait thumb flex-shrink-0">
-                    <img src="assets/img/Diaries2026/IMG-20251107-WA0021.jpg" alt="Customization Options" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
+                    <img src="assets/img/Planners/JPP.jpeg" alt="Premium Planner Design" style="width: 100%; height: 100%; object-fit: cover; cursor: pointer;" onclick="showImage(this.src, this.alt);">
                   </div>
                 </div>
                 <button onclick="scrollThumbnails('left')" class="btn btn-dark position-absolute top-50 start-0 translate-middle-y" style="width: 40px; height: 40px; padding: 0; border-radius: 50%; z-index: 10; margin-left: -20px;">
@@ -199,8 +178,8 @@
 
             <!-- Right: Text Content -->
             <div class="col-12 col-md-6">
-              <h1>Premium 2026 Diaries – Plan Your Year with Style</h1>
-              <p>Welcome the new year with our premium 2026 diaries. Designed for both personal and professional use, these diaries combine functionality with elegant design. With daily planning pages and monthly overview sections, staying organized has never been easier or more stylish.</p>
+              <h1>Premium Planners – Organize Your Life with Purpose</h1>
+              <p>Take control of your goals and daily tasks with our premium planners. Designed for productivity enthusiasts, professionals, and anyone seeking better organization, these planners feature thoughtfully crafted layouts that help you plan, track, and achieve your objectives.</p>
 
               <p class="mt-4">
                 <a href="contact.html" class="btn btn-primary me-2 mb-2 mb-sm-0">Request Quote</a>
@@ -209,38 +188,40 @@
 
               <h5 class="mt-4">Key Features</h5>
               <ul>
-                <li><strong>Daily Planning:</strong> One full page per day for comprehensive scheduling and note-taking</li>
-                <li><strong>Monthly Overview:</strong> Quick reference planner pages for each month to see your schedule at a glance</li>
-                <li><strong>Premium Quality:</strong> Durable hard cover with superior paper stock for a professional finish</li>
-                <li><strong>Flexible Options:</strong> Available in color and grayscale inner pages to suit your preferences</li>
-                <li><strong>Custom Branding:</strong> Add your logo and personalization for corporate gifts or personal touch</li>
+                <li><strong>Goal Setting Pages:</strong> Dedicated sections for annual, quarterly, and monthly goal planning</li>
+                <li><strong>Flexible Layouts:</strong> Choose from daily, weekly, or monthly planning formats</li>
+                <li><strong>Habit Trackers:</strong> Built-in trackers to monitor progress and build positive routines</li>
+                <li><strong>Premium Quality:</strong> Durable covers with high-quality paper for smooth writing</li>
+                <li><strong>Custom Branding:</strong> Add your logo and personalization for corporate or personal use</li>
               </ul>
 
               <h5 class="mt-4">Perfect For</h5>
               <ul>
-                <li><strong>Business Professionals:</strong> Stay organized with meetings, deadlines, and daily tasks</li>
-                <li><strong>Goal Setters:</strong> Plan and achieve your 2026 objectives with dedicated daily space</li>
-                <li><strong>Students:</strong> Track assignments, exam schedules, and study plans efficiently</li>
-                <li><strong>Corporate Gifting:</strong> Impress clients and employees with personalized, high-quality diaries</li>
+                <li><strong>Goal Achievers:</strong> Track and accomplish your personal and professional objectives</li>
+                <li><strong>Project Managers:</strong> Organize multiple projects with dedicated planning sections</li>
+                <li><strong>Students:</strong> Plan study schedules, assignments, and exam preparation efficiently</li>
+                <li><strong>Entrepreneurs:</strong> Manage business goals, strategies, and daily operations</li>
+                <li><strong>Corporate Gifting:</strong> Premium branded planners for clients and team members</li>
               </ul>
 
               <h5 class="mt-4">Customization Options</h5>
-              <p>Make your 2026 diary uniquely yours:</p>
+              <p>Make your planner uniquely yours:</p>
               <ul>
-                <li><strong>Cover Design:</strong> Custom cover printing with your logo or design</li>
-                <li><strong>Color Choices:</strong> Choice of cover colors and materials</li>
-                <li><strong>Special Sections:</strong> Add custom sections for notes, contacts, or planning</li>
-                <li><strong>Bulk Orders:</strong> Bulk ordering available for corporate gifts with special pricing</li>
+                <li><strong>Cover Design:</strong> Custom printing with your logo, artwork, or motivational designs</li>
+                <li><strong>Layout Choices:</strong> Daily, weekly, monthly, or hybrid planning layouts</li>
+                <li><strong>Special Sections:</strong> Add custom pages for notes, contacts, or vision boards</li>
+                <li><strong>Size Options:</strong> Available in various sizes from pocket to desk format</li>
+                <li><strong>Bulk Orders:</strong> Special pricing for corporate orders and team planners</li>
               </ul>
 
               <div class="alert alert-success mt-4">
-                <h5 class="alert-heading">🎉 Early Bird Special!</h5>
-                <p class="mb-2">Order your 2026 diaries now and enjoy:</p>
+                <h5 class="alert-heading">📋 Planning Made Easy!</h5>
+                <p class="mb-2">Order your custom planners and enjoy:</p>
                 <ul class="mb-0">
-                  <li>Special discounted pricing on all orders</li>
-                  <li>Guaranteed delivery before year-end</li>
-                  <li>Free customization on bulk orders (50+ units)</li>
-                  <li>Priority production for early orders</li>
+                  <li>Competitive pricing on all planner formats</li>
+                  <li>Fast turnaround with quality guarantees</li>
+                  <li>Free design consultation for custom layouts</li>
+                  <li>Volume discounts for bulk orders (25+ units)</li>
                 </ul>
               </div>
             </div>
@@ -252,8 +233,8 @@
           <h4 class="mb-3">Explore More</h4>
           <div class="row g-3 text-center">
             <div class="col-6 col-md-3"><a class="text-decoration-none" href="diaries-planners.html">All Diaries & Planners</a></div>
+            <div class="col-6 col-md-3"><a class="text-decoration-none" href="2026-diaries.html">2026 Diaries</a></div>
             <div class="col-6 col-md-3"><a class="text-decoration-none" href="corporate-diaries.html">Corporate Diaries</a></div>
-            <div class="col-6 col-md-3"><a class="text-decoration-none" href="personalized-embossed-diaries.html">Personalized Diaries</a></div>
             <div class="col-6 col-md-3"><a class="text-decoration-none" href="corporate-gift-sets.html">Corporate Gift Sets</a></div>
           </div>
         </section>
@@ -306,60 +287,27 @@
       let currentIndex = 0;
       let autoRotateInterval;
       const mediaItems = [
-        { type: 'video', src: 'assets/img/Diaries2026/Diary_video.mp4', alt: '2026 Diary Video' },
-        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251106-WA000.jpg', alt: 'Premium Cover Design' },
-        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251106-WA0001.jpg', alt: 'Daily Planner Pages' },
-        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0012.jpg', alt: 'Monthly Overview Layout' },
-        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0019.jpg', alt: 'Quality Binding' },
-        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0020.jpg', alt: 'Interior Pages' },
-        { type: 'image', src: 'assets/img/Diaries2026/IMG-20251107-WA0021.jpg', alt: 'Customization Options' }
+        { type: 'image', src: 'assets/img/Planners/JPP-10.png', alt: 'Planner Layout Design' },
+        { type: 'image', src: 'assets/img/Planners/JPP-36.png', alt: 'Planner Page Layout' },
+        { type: 'image', src: 'assets/img/Planners/JPP-44.jpeg', alt: 'Planner Weekly Spread' },
+        { type: 'image', src: 'assets/img/Planners/JPP.jpeg', alt: 'Premium Planner Design' }
       ];
 
       function showImage(src, alt) {
         const mainImage = document.getElementById('mainImage');
-        const mainVideo = document.getElementById('mainVideo');
+        mainImage.src = src;
+        mainImage.alt = alt;
         
         // Stop auto-rotate when user manually selects
         clearInterval(autoRotateInterval);
-        
-        mainVideo.style.display = 'none';
-        mainVideo.pause();
-        mainImage.style.display = 'block';
-        mainImage.src = src;
-        mainImage.alt = alt;
         
         // Update currentIndex
         currentIndex = mediaItems.findIndex(item => item.src === src);
       }
       
-      function showVideo() {
-        const mainImage = document.getElementById('mainImage');
-        const mainVideo = document.getElementById('mainVideo');
-        
-        // Stop auto-rotate when user manually selects
-        clearInterval(autoRotateInterval);
-        
-        mainImage.style.display = 'none';
-        mainVideo.style.display = 'block';
-        mainVideo.load();
-        mainVideo.play().catch(() => {});
-        
-        // Resume auto-rotate after video ends
-        mainVideo.onended = function() {
-          startAutoRotate();
-        };
-        
-        // Update currentIndex
-        currentIndex = 0;
-      }
-      
       function showCurrentMedia() {
         const item = mediaItems[currentIndex];
-        if (item.type === 'video') {
-          showVideoAuto();
-        } else {
-          showImageAuto(item.src, item.alt);
-        }
+        showImageAuto(item.src, item.alt);
       }
       
       function showNextMedia() {
@@ -369,31 +317,8 @@
       
       function showImageAuto(src, alt) {
         const mainImage = document.getElementById('mainImage');
-        const mainVideo = document.getElementById('mainVideo');
-        
-        mainVideo.style.display = 'none';
-        mainVideo.pause();
-        mainImage.style.display = 'block';
         mainImage.src = src;
         mainImage.alt = alt;
-      }
-      
-      function showVideoAuto() {
-        const mainImage = document.getElementById('mainImage');
-        const mainVideo = document.getElementById('mainVideo');
-        
-        mainImage.style.display = 'none';
-        mainVideo.style.display = 'block';
-        mainVideo.load();
-        
-        // Auto-play video
-        mainVideo.play().catch(() => {});
-        
-        // When video ends, continue auto-rotation
-        mainVideo.onended = function() {
-          // Small delay before showing next item
-          setTimeout(showNextMedia, 500);
-        };
       }
       
       function startAutoRotate() {
