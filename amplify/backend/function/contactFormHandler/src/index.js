@@ -85,8 +85,8 @@ exports.handler = async (event) => {
                                         <div class="field">
                                             <span class="label">Email:</span> <a href="mailto:${body.email}">${body.email}</a>
                                         </div>
-                                        ${body.phone ? `<div class="field"><span class="label">Phone:</span> ${body.phone}</div>` : ''}
-                                        ${body.company ? `<div class="field"><span class="label">Company:</span> ${body.company}</div>` : ''}
+                                        ${body.phone && body.phone.trim() !== '' ? `<div class="field"><span class="label">Phone:</span> ${body.phone}</div>` : ''}
+                                        ${body.company && body.company.trim() !== '' ? `<div class="field"><span class="label">Company:</span> ${body.company}</div>` : ''}
                                         <div class="field">
                                             <span class="label">Subject:</span> ${body.subject || 'Not specified'}
                                         </div>
@@ -112,8 +112,8 @@ New Contact Form Submission - PrintSmith
 
 Name: ${body.name}
 Email: ${body.email}
-${body.phone ? `Phone: ${body.phone}` : ''}
-${body.company ? `Company: ${body.company}` : ''}
+${body.phone && body.phone.trim() !== '' ? `Phone: ${body.phone}` : ''}
+${body.company && body.company.trim() !== '' ? `Company: ${body.company}` : ''}
 Subject: ${body.subject || 'Not specified'}
 
 Message:
