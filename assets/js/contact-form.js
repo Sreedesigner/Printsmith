@@ -63,6 +63,10 @@ document.addEventListener('DOMContentLoaded', function() {
             website: document.querySelector('input[name="website"]')?.value || '' // Honeypot
         };
 
+        // Debug: Log what we're sending
+        console.log('Form data being sent:', formData);
+        console.log('Phone field specifically:', formData.phone);
+
         // Honeypot check - if filled, it's likely spam
         if (formData.website) {
             showAlert('danger', 'Form submission failed. Please try again.');
